@@ -21,35 +21,45 @@ export default function Home() {
       </header>
 
       {/* HERO */}
-      <section className="hero" role="region" aria-label="Hero">
-        <svg className="bg-heart left" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-          <path d="M100 185C100 185 10 120 10 70A45 45 0 0 1 100 55A45 45 0 0 1 190 70c0 50-90 115-90 115Z" fill="var(--heart)" />
-        </svg>
-        <svg className="bg-heart right" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-          <path d="M100 185C100 185 10 120 10 70A45 45 0 0 1 100 55A45 45 0 0 1 190 70c0 50-90 115-90 115Z" fill="var(--heart)" />
-        </svg>
+<section className="hero" role="region" aria-label="Hero">
+  {/* Background Hearts */}
+  <svg className="bg-heart left" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <path d="M100 185C100 185 10 120 10 70A45 45 0 0 1 100 55A45 45 0 0 1 190 70c0 50-90 115-90 115Z" fill="var(--heart)" />
+  </svg>
+  <svg className="bg-heart right" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <path d="M100 185C100 185 10 120 10 70A45 45 0 0 1 100 55A45 45 0 0 1 190 70c0 50-90 115-90 115Z" fill="var(--heart)" />
+  </svg>
+  {/* Chat Sticker - FIXED STYLE */}
+  <svg className="sticker chat" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+    <rect x="15" y="20" width="90" height="60" rx="16" fill="#FF7B7B" stroke="#FF6B6B" strokeWidth="2"/>
+    <rect x="22" y="27" width="76" height="46" rx="12" fill="#ffffff"/>
+    <circle cx="42" cy="50" r="6" fill="#FF7B7B"/>
+    <circle cx="60" cy="50" r="6" fill="#FF7B7B"/>
+    <circle cx="78" cy="50" r="6" fill="#FF7B7B"/>
+    <path d="M35 80l15-12h20l-12 12H35Z" fill="#FF7B7B"/>
+  </svg>
+  
+  {/* Bulb Sticker - FIXED STYLE */}
+  <svg className="sticker bulb" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="60" cy="45" r="25" fill="#ffffff" stroke="#FF7B7B" strokeWidth="3"/>
+    <path d="M45 65h30v8a4 4 0 0 1-4 4h-22a4 4 0 0 1-4-4v-8z" fill="#FF7B7B"/>
+    <path d="M52 77h16v4a2 2 0 0 1-2 2h-12a2 2 0 0 1-2-2v-4z" fill="#FF6B6B"/>
+    <circle cx="60" cy="45" r="15" fill="#FFF9E6"/>
+    <path d="M50 35l20 0M55 40l10 0M52 45l16 0" stroke="#FF7B7B" strokeWidth="2" strokeLinecap="round"/>
+  </svg>
 
-        <div className="hero-wrap">
-          <svg className="sticker chat" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
-            <rect x="10" y="14" width="70" height="46" rx="12" fill="#FF8C8C"/>
-            <rect x="16" y="20" width="58" height="34" rx="9" fill="#F2F2F2"/>
-            <circle cx="34" cy="37" r="4.5" fill="#BDBDBD"/>
-            <circle cx="48" cy="37" r="4.5" fill="#BDBDBD"/>
-            <circle cx="62" cy="37" r="4.5" fill="#BDBDBD"/>
-            <path d="M28 60l10-8h12l-8 8H28Z" fill="#FF8C8C"/>
-          </svg>
-          <svg className="sticker bulb" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
-            <path d="M48 12a24 24 0 0 0-12 45c2 2 3 5 3 7h18c0-2 1-5 3-7a24 24 0 0 0-12-45Z" fill="#F2F2F2" stroke="#FF8C8C" strokeWidth="4"/>
-            <rect x="39" y="64" width="18" height="10" rx="4" fill="#FF8C8C"/>
-          </svg>
-
-          <h1 className="headline">
-            Make<br /><span className="underline">Meaningful</span><br />Connections
-          </h1>
-          <p className="sub">PopIn transforms networking by effortlessly connecting you with the right people based on mutual needs and offerings, making every interaction meaningful.</p>
-          <a className="cta" href="https://app.letspopin.com/e/1287" target="_blank">PopIn Now</a>
-        </div>
-      </section>
+  <div className="hero-wrap">
+    <h1 className="headline">
+  Make<br />
+  <span className="underline">Meaningful</span><br /><span className="underline">Connections</span>
+</h1>
+    <p className="sub">
+      PopIn transforms networking by effortlessly connecting you with the right people based 
+      on mutual needs and offerings, making every interaction meaningful.
+    </p>
+    <a className="cta" href="https://app.letspopin.com/e/1287" target="_blank">PopIn Now</a>
+  </div>
+</section>
 
       {/* FEATURE CARDS */}
      <section className="section" id="explore" aria-label="Explore">

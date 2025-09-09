@@ -17,29 +17,106 @@ body{
   color:var(--text); background:var(--bg);
 }
 
-/* NAV */
-.nav{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid #eee}
-.nav-wrap{max-width:var(--maxw);margin:auto;display:flex;align-items:center;justify-content:space-between;padding:18px 24px}
-.brand{display:flex;align-items:center;gap:12px}
-.brand img{height:64px;display:block;margin-left:-8px}
-.nav-links{display:flex;gap:36px;align-items:center}
-.nav-links a{color:var(--text);text-decoration:none;font-weight:600;font-size:16px}
-.cta{background:var(--primary);color:#fff;padding:12px 20px;border-radius:999px;border:0;font-weight:700;cursor:pointer}
-.cta:active{transform:translateY(1px)}
+/* NAV - FIXED */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--bg);
+  width: 100%;
+}
+.nav-wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px 20px 12px;
+  width: 100%;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 900;
+  font-size: 24px;
+  color: var(--text);
+  transform: translateX(-20px);
+}
+.brand img{height:100px;display:block;margin-left:0}
+.nav-links {
+  display: flex;
+  gap: 36px;
+  align-items: center;
+}
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+}
+.cta {
+  background: var(--primary);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 999px;
+  border: 0;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 16px;
+}
+.cta:active {
+  transform: translateY(1px);
+}
 
-/* HERO */
-.hero{position:relative;overflow:hidden}
-.hero-wrap{max-width:var(--maxw);margin:0 auto;padding:96px 24px 100px;text-align:center}
-.headline{font-weight:900;font-size:clamp(56px,9.2vw,120px);line-height:1.02;letter-spacing:-2px;display:inline-block;position:relative}
-.underline{position:relative;display:inline-block}
-.underline::after{content:"";position:absolute;left:-8px;right:-8px;height:18px;bottom:-12px;background:var(--accent);border-radius:14px;transform:skewX(-6deg);z-index:-1}
-.sub{margin:28px auto 38px;max-width:780px;color:var(--muted);font-size:18px;line-height:1.65}
-.sticker{position:absolute;width:88px;filter:drop-shadow(0 6px 10px rgba(0,0,0,.08))}
-.sticker.chat{left:14%;top:50%;transform:rotate(-10deg)}
-.sticker.bulb{right:14%;top:50%;transform:rotate(8deg)}
-.bg-heart{position:absolute;width:min(48vw,560px);opacity:.38}
-.bg-heart.left{left:-6vw;top:16vh}
-.bg-heart.right{right:-6vw;bottom:-6vh}
+/* HERO - FIXED */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+.hero-wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 60px 24px;
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+.headline {
+  font-weight: 900;
+  font-size: clamp(56px, 9.2vw, 120px);
+  line-height: 1.02;
+  letter-spacing: -2px;
+  margin: 0 0 28px 0;
+  position: relative;
+}
+.underline {
+  position: relative;
+  display: inline-block;
+}
+.underline::after{content:"";position:absolute;left:-8px;right:-8px;height:20px;bottom:-8px;background:var(--accent);border-radius:14px;transform:skewX(-12deg);z-index:-1}
+.sub {
+  margin: 28px auto 38px;
+  max-width: 680px;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+/* STICKERS - FIXED */
+.sticker{position:absolute;width:100px;height:100px;filter:drop-shadow(0 8px 16px rgba(0,0,0,.12))}
+.sticker.chat{left:12%;top:35%;transform:rotate(-15deg)}
+.sticker.bulb{right:12%;top:35%;transform:rotate(12deg)}
+
+/* BACKGROUND HEARTS - ADDED BACK */
+.bg-heart{position:absolute;width:min(48vw,560px);opacity:.38;z-index:0}
+.bg-heart.left{left:-6vw;top:8vh}
+.bg-heart.right{right:-6vw;bottom:2vh}
 
 /* SECTION */
 .section{max-width:var(--maxw);margin:0 auto;padding:24px 24px 96px;position:relative;overflow:visible}
@@ -55,7 +132,7 @@ body{
 .center{display:flex;justify-content:center}
 .mt-20{margin-top:20px}
 
-/* WHAT’S POPIN */
+/* WHAT'S POPIN */
 .whats-title{font-weight:900;font-size:clamp(40px,5.5vw,64px);text-align:center;margin:90px 0 30px;position:relative;display:inline-block;left:50%;transform:translateX(-50%)}
 .whats-title .title-underline{position:relative;display:inline-block}
 .whats-title .title-underline::after{content:"";position:absolute;left:-8px;right:-8px;height:12px;bottom:-10px;background:var(--accent);border-radius:12px;transform:skewX(-6deg);z-index:-1}
@@ -81,25 +158,6 @@ body{
 .wh-heart.h5{left:50%;bottom:-40px;transform:translateX(-50%)}
 .wh-heart.h6{left:-70px;top:520px}
 .wh-heart.h7{right:-80px;top:600px}
-
-/* Responsive */
-@media (max-width:1100px){.nav-wrap{padding:16px 20px}}
-@media (max-width:992px){
-  .features{grid-template-columns:1fr 1fr}
-  .wh-heart{width:260px;opacity:.28}
-  .wh-heart.h1{left:24px;top:90px}
-  .wh-heart.h2{right:40px;top:260px}
-  .wh-heart.h3{left:30px;bottom:160px}
-  .wh-heart.h4{right:40px;bottom:180px}
-  .wh-heart.h5{left:50%;bottom:-60px;transform:translateX(-50%)}
-}
-@media (max-width:720px){
-  .nav-links a{display:none}
-  .sticker,.bg-heart{display:none}
-  .features{grid-template-columns:1fr}
-  .whats-item,.whats-item.reverse{grid-template-columns:1fr}
-  .wh-heart{display:none}
-}
 
 /* SUSHI CONVEYOR BELT - FIXED VERSION */
 .sushi-conveyor {
@@ -195,13 +253,27 @@ body{
   animation-play-state: paused;
 }
 
-/* Responsive adjustments */
-@media (max-width: 720px) {
+/* Responsive */
+@media (max-width:1100px){.nav-wrap{padding:16px 20px}}
+@media (max-width:992px){
+  .features{grid-template-columns:1fr 1fr}
+  .wh-heart{width:260px;opacity:.28}
+  .wh-heart.h1{left:24px;top:90px}
+  .wh-heart.h2{right:40px;top:260px}
+  .wh-heart.h3{left:30px;bottom:160px}
+  .wh-heart.h4{right:40px;bottom:180px}
+  .wh-heart.h5{left:50%;bottom:-60px;transform:translateX(-50%)}
+}
+@media (max-width:720px){
+  .nav-links a{display:none}
+  .sticker,.bg-heart{display:none}
+  .features{grid-template-columns:1fr}
+  .whats-item,.whats-item.reverse{grid-template-columns:1fr}
+  .wh-heart{display:none}
   .sushi-card {
     min-width: 280px;
     max-width: 280px;
   }
-  
   .conveyor-track {
     gap: 20px;
   }
