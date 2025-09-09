@@ -24,14 +24,16 @@ body{
   z-index: 10;
   background: var(--bg);
   width: 100%;
+  padding: 40px 0; /* Increase vertical padding more */
 }
+
 .nav-wrap {
   max-width: var(--maxw);
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 24px 20px 12px;
+  padding: 0 80px 0 40px; /* Asymmetric padding */
   width: 100%;
 }
 .brand {
@@ -43,22 +45,25 @@ body{
   color: var(--text);
   transform: translateX(-20px);
 }
-.brand img{height:100px;display:block;margin-left:0}
+
+.brand img{height:100px;display:block;margin-left:0} 
 .nav-links {
   display: flex;
-  gap: 36px;
+  justify-content: space-between; /* Full spread */
   align-items: center;
+  flex: 1; /* Take up all available space */
+  margin: 0 80px; /* Increase margins for more spread */
 }
 .nav-links a {
   color: var(--text);
   text-decoration: none;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 18px; /* Slightly larger font */
 }
 .cta {
   background: var(--primary);
   color: #fff;
-  padding: 12px 24px;
+  padding: 16px 32px; /* Increase button padding */
   border-radius: 999px;
   border: 0;
   font-weight: 700;
@@ -74,7 +79,7 @@ body{
 .hero {
   position: relative;
   overflow: hidden;
-  background: #ffffff;
+  background: transparent; /* Change from #ffffff to transparent */
   min-height: 80vh;
   display: flex;
   align-items: center;
@@ -98,8 +103,20 @@ body{
 .underline {
   position: relative;
   display: inline-block;
+  z-index: 2;
 }
-.underline::after{content:"";position:absolute;left:-8px;right:-8px;height:20px;bottom:-8px;background:var(--accent);border-radius:14px;transform:skewX(-12deg);z-index:-1}
+.underline::after{
+  content:"";
+  position:absolute;
+  left:-12px;
+  right:-12px;
+  height:16px;
+  bottom:-4px;
+  background:var(--accent);
+  border-radius:8px;
+  transform:skewX(-20deg);
+  z-index:1;
+}
 .sub {
   margin: 28px auto 38px;
   max-width: 680px;
@@ -108,10 +125,21 @@ body{
   line-height: 1.65;
 }
 
-/* STICKERS - FIXED */
-.sticker{position:absolute;width:100px;height:100px;filter:drop-shadow(0 8px 16px rgba(0,0,0,.12))}
-.sticker.chat{left:12%;top:35%;transform:rotate(-15deg)}
-.sticker.bulb{right:12%;top:35%;transform:rotate(12deg)}
+/* STICKERS - FIXED OVERLAY */
+.sticker{
+  position:absolute;
+  width:120px;
+  height:120px;
+  filter:drop-shadow(0 8px 16px rgba(0,0,0,.12));
+}
+.sticker.chat{
+  left:16%; /* More to the right */
+  top:25%; /* Move up */
+  transform:rotate(-15deg);
+  width:160px; /* Make bigger */
+  height:160px; /* Make bigger */
+}
+.sticker.bulb{right:8%;top:30%;transform:rotate(12deg)}
 
 /* BACKGROUND HEARTS - ADDED BACK */
 .bg-heart{position:absolute;width:min(48vw,560px);opacity:.38;z-index:0}
@@ -254,7 +282,7 @@ body{
 }
 
 /* Responsive */
-@media (max-width:1100px){.nav-wrap{padding:16px 20px}}
+@media (max-width:1100px){.nav-wrap{padding:0 32px}}
 @media (max-width:992px){
   .features{grid-template-columns:1fr 1fr}
   .wh-heart{width:260px;opacity:.28}

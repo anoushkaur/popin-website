@@ -11,12 +11,12 @@ export default function Home() {
             <img src="/popin-logo.png" alt="PopIn logo" />
           </div>
           <nav className="nav-links">
-            <a href="#about">About</a>
-            <a href="#explore">Explore</a>
-            <a href="#blog">Blog</a>
-            <a href="#faq">FAQ</a>
-            <a className="cta" href="https://app.letspopin.com/e/1287" target="_blank">PopIn Now</a>
-          </nav>
+  <a href="#about">About</a>
+  <a href="#explore">Explore</a>
+  <a href="#blog">Blog</a>
+  <a href="#faq">FAQ</a>
+</nav>
+<a className="cta" href="https://app.letspopin.com/e/1287" target="_blank">PopIn Now</a>
         </div>
       </header>
 
@@ -29,29 +29,17 @@ export default function Home() {
   <svg className="bg-heart right" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
     <path d="M100 185C100 185 10 120 10 70A45 45 0 0 1 100 55A45 45 0 0 1 190 70c0 50-90 115-90 115Z" fill="var(--heart)" />
   </svg>
-  {/* Chat Sticker - FIXED STYLE */}
-  <svg className="sticker chat" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-    <rect x="15" y="20" width="90" height="60" rx="16" fill="#FF7B7B" stroke="#FF6B6B" strokeWidth="2"/>
-    <rect x="22" y="27" width="76" height="46" rx="12" fill="#ffffff"/>
-    <circle cx="42" cy="50" r="6" fill="#FF7B7B"/>
-    <circle cx="60" cy="50" r="6" fill="#FF7B7B"/>
-    <circle cx="78" cy="50" r="6" fill="#FF7B7B"/>
-    <path d="M35 80l15-12h20l-12 12H35Z" fill="#FF7B7B"/>
-  </svg>
-  
-  {/* Bulb Sticker - FIXED STYLE */}
-  <svg className="sticker bulb" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="60" cy="45" r="25" fill="#ffffff" stroke="#FF7B7B" strokeWidth="3"/>
-    <path d="M45 65h30v8a4 4 0 0 1-4 4h-22a4 4 0 0 1-4-4v-8z" fill="#FF7B7B"/>
-    <path d="M52 77h16v4a2 2 0 0 1-2 2h-12a2 2 0 0 1-2-2v-4z" fill="#FF6B6B"/>
-    <circle cx="60" cy="45" r="15" fill="#FFF9E6"/>
-    <path d="M50 35l20 0M55 40l10 0M52 45l16 0" stroke="#FF7B7B" strokeWidth="2" strokeLinecap="round"/>
-  </svg>
+ {/* Chat Sticker */}
+<img className="sticker chat" src="/message-icon.png" alt="chat" />
+
+{/* Lightbulb Sticker */}
+<img className="sticker bulb" src="/lightbulb-icon.png" alt="lightbulb" />
 
   <div className="hero-wrap">
     <h1 className="headline">
   Make<br />
-  <span className="underline">Meaningful</span><br /><span className="underline">Connections</span>
+Meaningful<br />
+<span className="underline">Connections</span>
 </h1>
     <p className="sub">
       PopIn transforms networking by effortlessly connecting you with the right people based 
