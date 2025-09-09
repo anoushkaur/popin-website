@@ -1,4 +1,6 @@
 // app/page.jsx
+import SushiConveyor from '../components/SushiConveyor';
+
 export default function Home() {
   return (
     <>
@@ -50,43 +52,13 @@ export default function Home() {
       </section>
 
       {/* FEATURE CARDS */}
-      <section className="section" id="explore" aria-label="Explore">
-        <div className="features">
-          <article className="feature-card">
-            <div className="imgwrap">
-              <img src="https://images.unsplash.com/photo-1554344728-77cf90d9ed26?q=80&w=1400&auto=format&fit=crop" alt="Workout buddies" />
-            </div>
-            <div className="body">
-              <h3>Find Like Minded Workout Buddies</h3>
-              <button className="btn-mini">Explore</button>
-            </div>
-          </article>
-
-          <article className="feature-card">
-            <div className="imgwrap">
-              <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1400&auto=format&fit=crop" alt="Friends hanging out together" />
-            </div>
-            <div className="body">
-              <h3>Make New Friends At Your Local Bar</h3>
-              <button className="btn-mini">Explore</button>
-            </div>
-          </article>
-
-          <article className="feature-card">
-            <div className="imgwrap">
-              <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1400&auto=format&fit=crop" alt="Internships" />
-            </div>
-            <div className="body">
-              <h3>Seek Marketing Internships</h3>
-              <button className="btn-mini">Explore</button>
-            </div>
-          </article>
-        </div>
-
-        <div className="center mt-20">
-          <a className="cta" href="https://app.letspopin.com/e/1287" target="_blank">PopIn Now</a>
-        </div>
-      </section>
+     <section className="section" id="explore" aria-label="Explore">
+      <SushiConveyor />
+  
+      <div className="center mt-20">
+        <a className="cta" href="https://app.letspopin.com/e/1287" target="_blank">PopIn Now</a>
+      </div>
+    </section>
 
       {/* WHAT'S POPIN */}
       <section className="section" id="about" aria-label="What is PopIn">

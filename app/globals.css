@@ -100,3 +100,109 @@ body{
   .whats-item,.whats-item.reverse{grid-template-columns:1fr}
   .wh-heart{display:none}
 }
+
+/* SUSHI CONVEYOR BELT - FIXED VERSION */
+.sushi-conveyor {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  margin: 32px 0 40px;
+  /* Fade edges for smooth appearance */
+  mask: linear-gradient(90deg, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask: linear-gradient(90deg, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.conveyor-track {
+  display: flex;
+  gap: 28px;
+  animation: sushi-scroll 60s linear infinite;
+  width: fit-content;
+  /* Ensure continuous movement */
+  will-change: transform;
+}
+
+/* Continuous scrolling animation - FIXED */
+@keyframes sushi-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Sushi conveyor cards */
+.sushi-card {
+  background: #fff;
+  border: 2px solid #111;
+  border-radius: 28px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  max-width: 320px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.sushi-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.sushi-card:hover .imgwrap img {
+  transform: scale(1.08);
+}
+
+.sushi-card .imgwrap {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background: #f4f4f4;
+}
+
+.sushi-card .imgwrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.sushi-card .body {
+  padding: 18px 18px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.sushi-card h3 {
+  font-size: 18px;
+  line-height: 1.3;
+  margin: 0;
+  max-width: 85%;
+  font-weight: 600;
+}
+
+.sushi-card .btn-mini:hover {
+  background: #111;
+  color: #fff;
+}
+
+/* Pause animation on hover for better UX */
+.sushi-conveyor:hover .conveyor-track {
+  animation-play-state: paused;
+}
+
+/* Responsive adjustments */
+@media (max-width: 720px) {
+  .sushi-card {
+    min-width: 280px;
+    max-width: 280px;
+  }
+  
+  .conveyor-track {
+    gap: 20px;
+  }
+}
