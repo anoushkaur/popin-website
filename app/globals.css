@@ -4,7 +4,7 @@
   --text:#0E0E0E;
   --muted:#666;
   --primary:#000;
-  --accent:#FF6B6B;
+  --accent:#ff6b6b;
   --heart:#FFD5D6;
   --radius:28px;
   --maxw:1200px;
@@ -102,20 +102,41 @@ body{
 .underline {
   position: relative;
   display: inline-block;
-  z-index: 2;
 }
-.underline::after{
-  content:"";
-  position:absolute;
-  left:-12px;
-  right:-12px;
-  height:16px;
-  bottom:-4px;
-  background:var(--accent);
-  border-radius:8px;
-  transform:skewX(-20deg);
-  z-index:1;
+
+.underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px; /* adjust spacing below text */
+  width: 100%;
+  height: 16px;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 20'><path d='M5 15 Q 80 5, 150 12 T 295 10' stroke='%23FF6F61' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>") no-repeat;
+  background-size: 100% 100%;
+  transform: rotate(-2deg); /* slight slant to look hand-drawn */
 }
+
+
+.underline-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-wrap > span {
+  position: relative;
+  z-index: 1; /* text above stroke */
+}
+
+.underline-svg {
+  position: absolute;
+  left: 0;
+  bottom: -0.18em; /* distance below text */
+  width: 100%;
+  height: 0.45em;   /* stroke thickness area */
+  pointer-events: none;
+}
+
+
 .sub {
   margin: 28px auto 38px;
   max-width: 680px;
@@ -197,18 +218,18 @@ body{
 /* Hearts inside section */
 .wh-heart{
   position:absolute;
-  opacity:.35;
-  width:280px;
+  opacity:.10;
+  width:580px;
   z-index:0;
   pointer-events:none;
   filter: brightness(0) saturate(100%) invert(56%) sepia(85%) saturate(1945%) hue-rotate(327deg) brightness(102%) contrast(94%);
-}.wh-heart.h1{left:-60px;top:60px}
-.wh-heart.h2{right:-80px;top:120px}
-.wh-heart.h3{left:-60px;bottom:260px}
-.wh-heart.h4{right:-80px;bottom:140px}
+}.wh-heart.h1{left:-400px;top:450px}
+.wh-heart.h2{right:-450px;top:-90px}
+.wh-heart.h3{left:300px;bottom:260px}
+/* .wh-heart.h4{right:-80px;bottom:140px} */
 .wh-heart.h5{left:50%;bottom:-40px;transform:translateX(-50%)}
-.wh-heart.h6{left:-70px;top:520px}
-.wh-heart.h7{right:-80px;top:600px}
+/* .wh-heart.h6{left:-70px;top:700px} */
+.wh-heart.h7{right:-400px;top:600px}
 
 /* SUSHI CONVEYOR BELT - FIXED VERSION */
 .sushi-conveyor {
@@ -377,6 +398,12 @@ body{
   background-position: center;
   background-repeat: no-repeat;
 }
+
+.grid-boxes-container {
+  transform: scale(1.2);
+  transform-origin: center;
+}
+
 
 .video-box {
   grid-column: 4;
