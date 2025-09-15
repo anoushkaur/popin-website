@@ -1,5 +1,6 @@
 // app/page.jsx
 import SushiConveyor from "../components/SushiConveyor";
+import FAQ from "../components/FAQ"; // Add this import
 
 export default function Home() {
   return (
@@ -57,7 +58,7 @@ export default function Home() {
                   d="M2 7 Q 25 2, 50 6 T 98 6"
                   fill="none"
                   stroke="#FF6F61"
-                  strokeWidth="3.5"
+                  strokeWidth="2" // Updated to thinner stroke
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />
@@ -104,7 +105,6 @@ export default function Home() {
 
         <img className="wh-heart h1" src="/balloon.png" alt="network" />
         <img className="wh-heart h2" src="/balloon.png" alt="network" />
-        {/* <img className="wh-heart h6" src="/balloon.png" alt="network" /> */}
         <img className="wh-heart h7" src="/balloon.png" alt="network" />
 
         <div className="whats">
@@ -205,6 +205,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* FAQ SECTION - Add this new section */}
+      <FAQ />
     </>
   );
 }
