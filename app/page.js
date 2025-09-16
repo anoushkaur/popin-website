@@ -1,6 +1,7 @@
 // app/page.jsx
 import SushiConveyor from "../components/SushiConveyor";
-import FAQ from "../components/FAQ"; // Add this import
+import FAQ from "../components/FAQ";
+import Footer from "../components/Footer"; // Add this import
 
 export default function Home() {
   return (
@@ -208,6 +209,9 @@ export default function Home() {
 
       {/* FAQ SECTION - Add this new section */}
       <FAQ />
+
+      {/* FOOTER SECTION */}
+      <Footer />
     </>
   );
 }
