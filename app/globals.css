@@ -94,7 +94,7 @@ body{
 .headline {
   font-weight: 900;
   font-size: clamp(56px, 9.2vw, 120px);
-  line-height: 1.02;
+  line-height: 1.15;
   letter-spacing: -2px;
   margin: 0 0 28px 0;
   position: relative;
@@ -441,23 +441,7 @@ body{
   color: white;
 }
 
-
-/* Responsive */
-@media (max-width: 992px) {
-  .grid-boxes-container {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 180px);
-  }
-}
-
-@media (max-width: 720px) {
-  .grid-boxes-container {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(8, 160px);
-  }
-}
-
-/* FAQ SECTION STYLES - Add this to your globals.css */
+/* Add these missing FAQ styles to your globals.css */
 
 .faq-section {
   padding: 80px 24px;
@@ -474,7 +458,7 @@ body{
 .faq-header {
   display: flex;
   align-items: flex-start;
-  justify-content: flex-start; /* Changed from space-between to flex-start */
+  justify-content: space-between;
   margin-bottom: 60px;
   gap: 40px;
 }
@@ -484,19 +468,16 @@ body{
   font-weight: 900;
   color: var(--text);
   margin: 0;
-  flex: 1;
-  max-width: 400px;
   line-height: 1.2;
 }
 
 .faq-contact {
   display: flex;
   align-items: center;
-  margin-left: auto; /* Add this to push the contact button to the right */
 }
 
 .contact-btn {
-  background: var(--primary);
+  background: var(--accent);
   color: white;
   border: none;
   border-radius: 25px;
@@ -511,7 +492,7 @@ body{
 }
 
 .contact-btn:hover {
-  background: #333;
+  background: #e55a5a;
   transform: translateY(-1px);
 }
 
@@ -576,7 +557,7 @@ body{
   justify-content: center;
   width: 32px;
   height: 32px;
-  background: var(--accent); /* Changed from var(--primary) to var(--accent) for coral color */
+  background: var(--accent);
   border-radius: 50%;
   color: white;
   transition: transform 0.3s ease, background-color 0.2s ease;
@@ -585,9 +566,8 @@ body{
 
 .faq-icon.open {
   transform: rotate(180deg);
-  background: var(--accent); /* Keep it the same coral color when open */
+  background: var(--accent);
 }
-
 
 .faq-answer {
   padding: 0 24px 24px 24px;
@@ -656,11 +636,75 @@ body{
   }
 }
 
-.footer-section {
-  background: #ffffff;
-  padding: 20px 24px 60px; /* Reduced top padding from 40px to 20px */
-  margin-top: 20px; /* Reduced from 40px to 20px */
+/* Responsive */
+@media (max-width: 992px) {
+  .grid-boxes-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 180px);
+  }
 }
+
+@media (max-width: 720px) {
+  .grid-boxes-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 160px);
+  }
+}
+
+.faq-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 40px;
+  overflow-x: auto;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 0;
+}
+
+.faq-tab {
+  background: #f8f8f8;
+  border: 2px solid #e0e0e0;
+  border-bottom: none;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  cursor: pointer;
+  border-radius: 12px 12px 0 0;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  min-width: fit-content;
+  position: relative;
+}
+
+.faq-tab:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+
+.faq-tab.active {
+  background: white;
+  border-color: #111;
+  color: var(--text);
+  border-bottom: 2px solid white;
+  margin-bottom: -1px;
+  z-index: 1;
+}
+
+/* Responsive tabs */
+@media (max-width: 720px) {
+  .faq-tabs {
+    gap: 4px;
+    margin-bottom: 30px;
+  }
+  
+  .faq-tab {
+    padding: 10px 16px;
+    font-size: 13px;
+    border-radius: 8px 8px 0 0;
+  }
+}
+
 
 .footer-container {
   max-width: var(--maxw);
