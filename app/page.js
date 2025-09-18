@@ -14,7 +14,7 @@ export default function Home() {
           </div>
           <nav className="nav-links">
             <a href="#about">About</a>
-            <a href="#explore">Explore</a>
+            <a href="#learnmore">Learn More</a>
             <a href="#blog">Blog</a>
             <a href="#faq">FAQ</a>
           </nav>
@@ -85,7 +85,7 @@ export default function Home() {
       </section>
 
       {/* FEATURE CARDS */}
-      <section className="section" id="explore" aria-label="Explore">
+      <section className="section" id="learnmore" aria-label="Learn More">
         <SushiConveyor />
         <div className="center mt-20">
           <a
@@ -106,7 +106,8 @@ export default function Home() {
 
         <img className="wh-heart h1" src="/balloon.png" alt="network" />
         <img className="wh-heart h2" src="/balloon.png" alt="network" />
-        <img className="wh-heart h7" src="/balloon.png" alt="network" />
+        <img className="balloon-right" src="/balloon.png" alt="balloon decoration" />  
+        <img className="balloon-left" src="/balloon.png" alt="balloon decoration" /> 
 
         <div className="whats">
           <svg
@@ -155,6 +156,8 @@ export default function Home() {
                 and let meaningful conversations spark as you go about your day.
               </p>
             </div>
+            {/* Second dotted line */}
+            <img className="dotted-line second" src="/dotted-line.png" alt="" />
           </div>
 
           <div className="whats-item">

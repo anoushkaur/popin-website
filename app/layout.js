@@ -2,9 +2,10 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'PopIn — Make Meaningful Connections',
-  description: 'PopIn connects you with the right people for meaningful conversations.',
-};
+  title: 'PopIn - Make Meaningful Connections',
+  description: 'Transform networking by connecting with the right people based on mutual needs',
+  viewport: 'width=device-width, initial-scale=1.0', // Add this line
+}
 
 export default function RootLayout({ children }) {
   return (

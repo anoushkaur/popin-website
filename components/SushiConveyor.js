@@ -89,7 +89,7 @@ export default function SushiConveyor() {
             </div>
             <div className="body">
               <h3>{card.title}</h3>
-              <button className="btn-mini">Explore</button>
+              <button className="btn-mini">Learn More</button>
             </div>
           </article>
         ))}
